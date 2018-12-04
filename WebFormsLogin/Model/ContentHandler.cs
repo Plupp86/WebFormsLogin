@@ -11,6 +11,33 @@ namespace WebFormsLogin.Model
 		{
 			new NewsItem
 			{
+				Id = 5,
+				Author = "Christofer",
+				Date = DateTime.Now,
+				Content = "Yet another supersecret is reavealed. Stay logged in to be sure not to miss any more news.",
+				Secret = true,
+				Header = "Super Secret"
+			},
+			new NewsItem
+			{
+				Id = 4,
+				Author = "Christofer",
+				Date = DateTime.Now,
+				Content = "Another top secret news post!",
+				Secret = true,
+				Header = "More secrets"
+			},
+			new NewsItem
+			{
+				Id = 3,
+				Author = "Christofer",
+				Date = DateTime.Now,
+				Content = "The Secret News Page is now ready to go live!",
+				Secret = false,
+				Header = "Going live"
+			},
+			new NewsItem
+			{
 				Id = 2,
 				Author = "Christofer",
 				Date = DateTime.Now,
@@ -32,6 +59,13 @@ namespace WebFormsLogin.Model
 		public List<NewsItem> GetTheNews()
 		{
 			return news;
+		}
+
+		public List<NewsItem> GetPublicNews()
+		{
+			return news
+				.Where(n => n.Secret == false)
+				.ToList();
 		}
 	}
 }

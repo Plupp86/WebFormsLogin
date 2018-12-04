@@ -41,40 +41,44 @@
 				<%--Site Scripts--%>
 			</Scripts>
 		</asp:ScriptManager>
-
 		<div class="navbar navbar-inverse navbar-fixed-top sn-navbar">
-
-
-			<ul class="nav navbar-nav nav-left">
-				<li><a runat="server" href="~/">Home</a></li>
-				<li><a runat="server" href="~/News">The News</a></li>
-			</ul>
-
-			<ul class="nav navbar-nav nav-right">
-				<li><a runat="server" href="~/About">Register</a></li>
-				<li id="tog"><a>Log In</a></li>
-			</ul>
-
-
-			<div class="sn-login" id="sn-login">
-				<div class="sn-form">
-					<form>
-						<div class="form-group">
-							<input type="text" class="form-control" id="userName" placeholder="User Name" style="width:100%;">
-						</div>
-						<div class="form-group">
-							<input type="password" class="form-control" id="password" placeholder="Password">
-						</div>
-
-						<div class="form-group row">
-							
-								<button type="submit" class="btn btn-default">Sign in</button>
-							
-						</div>
-					</form>
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse sn-navbar-collapse">
+					<ul class="nav navbar-nav nav-left">
+						<li><a runat="server" href="~/">Home</a></li>
+						<li><a runat="server" href="~/News">The News</a></li>
+					</ul>
+					<ul class="nav navbar-nav nav-right">
+						<li id="loggedOut" runat="server"><a>Log In</a></li>
+						<li id="loggedIn" runat="server">
+							<asp:LoginStatus ID="LoginStatus" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Default.aspx" />
+						</li>
+					</ul>
 				</div>
 			</div>
 
+			<div class="snlogin" id="snlogin" runat="server">
+				<div class="sn-form">
+					<div class="form-group">
+						<input runat="server" type="text" class="form-control" id="userName" placeholder="User Name" style="width: 100%;">
+						<span runat="server" id="userNameError">User Name does not exist!</span>
+					</div>
+					<div class="form-group">
+						<input runat="server" type="password" class="form-control" id="password" placeholder="Password">
+						<span runat="server" id="passwordError">Wrong password</span>
+					</div>
+					<div class="form-group row">
+						<asp:Button runat="server" ID="btnLogin" Text="Sign In" OnClick="submit_Click" class="btn btn-primary" />
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="sn-container">
 			<asp:ContentPlaceHolder ID="MainContent" runat="server">

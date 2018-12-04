@@ -11,5 +11,32 @@ namespace WebFormsLogin {
     
     
     public partial class News {
+        
+        /// <summary>
+        /// NewsMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NewsMessage;
+        
+        /// <summary>
+        /// AuthenticatedMessagePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel AuthenticatedMessagePanel;
+        
+        /// <summary>
+        /// AnonymousMessagePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel AnonymousMessagePanel;
     }
 }

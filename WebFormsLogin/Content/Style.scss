@@ -4,11 +4,16 @@
 	padding: 0;
 }
 
+
 .sn-navbar {
-	background-color: rgba(0, 0, 0, 0.8);
-	position: absolute;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.sn-navbar-collapse {
+	background-color: none;
+	/*background-color: rgba(0, 0, 0, 0.8);*/
+	/*position: absolute;
 	z-index: 9;
-	height: 60px;
+	height: 50px;
 	color: silver;
 	margin-bottom: 0;
 	padding-left: calc(50% - 400px);
@@ -16,7 +21,15 @@
 
 	a, a:visited, a:active {
 		color: silver;
-	}
+	}*/
+}
+
+.nav-left {
+	margin-left: calc(50% - 400px);
+}
+
+.nav-right {
+	margin-right: calc(50% - 400px);
 }
 
 .sn-main {
@@ -25,9 +38,9 @@
 
 .sn-container {
 	width: 100%;
-	height: calc(100vh - 60px);
+	height: calc(100vh - 50px);
 	background-color: rgba(213, 213, 213, 0.4);
-	margin-top: 60px;
+	margin-top: 50px;
 	padding-left: calc(50% - 400px);
 	padding-right: calc(50% - 400px);
 }
@@ -49,7 +62,7 @@
 	border-radius: 5px;
 	padding: 10px;
 	margin: auto;
-	margin-top: 0px;
+	margin-top: 10px;
 	color: black;
 }
 
@@ -70,15 +83,7 @@
 	margin-top: 30px;
 }
 
-.nav-left {
-	float: left;
-	left: 0px;
-}
 
-.nav-right {
-	float: right;
-	right: 0px;
-}
 
 .sn-news-list {
 	display: grid;
@@ -92,18 +97,18 @@
 	background-repeat: no-repeat;
 }
 
-.sn-login {
+.snlogin {
 	position: fixed;
-	top: 60px;
+	top: 50px;
 	right: calc(50% - 400px);
 	width: 300px;
-	height: 150px;
+	height: 180px;
 	display: none;
 	text-align: left;
 	padding: 10px;
 }
 
-#sn-login {
+#snlogin {
 	transition: transform .5s ease-in-out;
 	background-color: rgba(black,0.8);
 	border-bottom-left-radius: 5px;
@@ -116,15 +121,15 @@
 	text-align: right;
 }
 
-input[type=text],
+/*input[type=text],
 input[type=password] {
 	box-sizing: border-box;
-}
+}*/
 
 .btn {
 	margin-right: 15px;
 }
 
-#tog {
+#loggedOut {
 	cursor: pointer;
 }

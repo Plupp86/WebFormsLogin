@@ -19,7 +19,7 @@
 
 
 $(document).ready(function () {
-	$("#tog").click(function () {
-		$('#sn-login').fadeToggle();
+	$("#loggedOut").click(function () {
+		$('#snlogin').fadeToggle();
 	});
 });
