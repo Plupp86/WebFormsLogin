@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Data.Entity;
 using System.Web.Security;
-using System.Web.Services;
+
 using System.Web.UI;
-using System.Web.UI.WebControls;
+
 using WebFormsLogin.Model;
 
 namespace WebFormsLogin
@@ -13,6 +11,7 @@ namespace WebFormsLogin
 	public partial class SiteMaster : MasterPage
 	{
 		UserHandler _userHandler = new UserHandler();
+
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -31,12 +30,6 @@ namespace WebFormsLogin
 			}
 		}
 
-		//[WebMethod]
-		//public static string CallMe()
-		//{
-
-		//	return "$('#sn-login').fadeToggle();";
-		//}
 
 		protected void submit_Click(object sender, EventArgs e)
 		{
@@ -50,6 +43,7 @@ namespace WebFormsLogin
 			else if (!loginResponse.PasswordMatch)
 			{
 				passwordError.Style.Value = "display:block; color: red;";
+				snlogin.Style.Value = "display: block;";
 			}
 			else
 			{

@@ -113,17 +113,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="Content\Images\background-4.jpg" />
     <Content Include="Content\Images\secret.png" />
-    <Content Include="Model\UserDb.Context.tt">
+    <Content Include="Model\AzureDb.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>UserDb.Context.cs</LastGenOutput>
-      <DependentUpon>UserDb.edmx</DependentUpon>
+      <DependentUpon>AzureDb.edmx</DependentUpon>
+      <LastGenOutput>AzureDb.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\UserDb.tt">
+    <Content Include="Model\AzureDb.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>UserDb.edmx</DependentUpon>
-      <LastGenOutput>UserDb.cs</LastGenOutput>
+      <DependentUpon>AzureDb.edmx</DependentUpon>
+      <LastGenOutput>AzureDb.cs</LastGenOutput>
     </Content>
     <Content Include="News.aspx" />
     <Content Include="Content\Images\background.jpg" />
@@ -155,13 +155,15 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <EntityDeploy Include="Model\UserDb.edmx">
+    <EntityDeploy Include="Model\AzureDb.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>UserDb.Designer.cs</LastGenOutput>
+      <LastGenOutput>AzureDb.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Model\UserDb.edmx.diagram">
-      <DependentUpon>UserDb.edmx</DependentUpon>
+    <Content Include="Model\AzureDb.edmx.diagram">
+      <DependentUpon>AzureDb.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\secretnews - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\secretnews - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -200,36 +202,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Model\AzureDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AzureDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AzureDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AzureDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AzureDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AzureDb.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Model\ContentHandler.cs" />
     <Compile Include="Model\LoginResponse.cs" />
     <Compile Include="Model\NewsItem.cs" />
     <Compile Include="Model\Repository.cs" />
-    <Compile Include="Model\UserDb.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDb.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\UserDb.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDb.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\UserDb.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDb.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Model\UserHandler.cs" />
     <Compile Include="Model\Users.cs">
-      <DependentUpon>UserDb.tt</DependentUpon>
+      <DependentUpon>AzureDb.tt</DependentUpon>
     </Compile>
     <Compile Include="News.aspx.cs">
       <DependentUpon>News.aspx</DependentUpon>

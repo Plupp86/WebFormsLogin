@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="587aad96fe1b4a808a5a46eb5c80696e" Name="Diagram1">
-        <EntityTypeShape EntityType="WebFormsLoginModel.Users" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="4c6fb1a4272448ea9eac2e76afff0809" Name="Diagram1">
+        <EntityTypeShape EntityType="PingPongDBModel.Users" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

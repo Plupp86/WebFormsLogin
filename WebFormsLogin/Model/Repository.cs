@@ -7,7 +7,7 @@ namespace WebFormsLogin.Model
 {
 	public class Repository
 	{
-		LoginEntities entities = new LoginEntities();
+		Entities entities = new Entities();
 
 
 		public int GetUser(string userName)

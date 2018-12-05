@@ -14,7 +14,7 @@ namespace WebFormsLogin.Model
 				Id = 5,
 				Author = "Christofer",
 				Date = DateTime.Now,
-				Content = "Yet another supersecret is reavealed. Stay logged in to be sure not to miss any more news.",
+				Content = "Yet another supersecret is revealed. Stay logged in to be sure not to miss any more news.",
 				Secret = true,
 				Header = "Super Secret"
 			},
